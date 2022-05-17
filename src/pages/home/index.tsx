@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Card from "../../components/card";
-import { WrapperList } from "./styles";
-import Button from "@mui/material/Button";
+import { WrapperList, WrapperButton, WrapperContent } from "./styles";
+
 import { NavLink } from "react-router-dom";
 import { getListOrganizations } from "../../services/organization";
 
@@ -50,7 +50,7 @@ function Home() {
   }, []);
 
   return (
-    <>
+    <WrapperContent>
       <WrapperList>
         {organizationList.map((item) => {
           return (
@@ -65,10 +65,13 @@ function Home() {
           );
         })}
       </WrapperList>
-      <Button variant="outlined" onClick={() => getOrganizations(linkNextPage)}>
+      <WrapperButton
+        variant="outlined"
+        onClick={() => getOrganizations(linkNextPage)}
+      >
         See More...
-      </Button>
-    </>
+      </WrapperButton>
+    </WrapperContent>
   );
 }
 
