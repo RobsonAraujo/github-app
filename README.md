@@ -1,3 +1,15 @@
+## first thanks for taking the time to review my test :)
+
+I focused on the functionality of the Code, and integration with API, I didn't make the layout "beautiful", but I love writing CSS to make a layout the same as the designed layout
+
+about the tools, I used
+
+- ESLINT + prettier to ensure good code writing
+- Typescript+Javascript
+- Styled-Components for CSS-in-JS and material-UI for easy components creation
+- Axios for API integration
+- React-router for the routing
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

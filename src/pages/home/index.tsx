@@ -29,6 +29,9 @@ function Home() {
 
   const getOrganizations = async (linkNextPage: string | null) => {
     const response = await getListOrganizations(linkNextPage);
+
+    // Handle the linkHeader for paginations
+    // as documentation suggests -> https://docs.github.com/en/rest/overview/resources-in-the-rest-api#link-header
     const linkHeader = response.headers.link;
     const handledLink = linkHeader
       .split(";")[0]
