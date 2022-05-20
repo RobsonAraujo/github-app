@@ -42,7 +42,15 @@ function Home() {
     const sortDataByName = organizationJson.sort((a, b) => {
       return a.login.localeCompare(b.login);
     });
-    setOrganizationList((prevState) => [...prevState, ...sortDataByName]);
+
+    setOrganizationList((prevState) => {
+      // Check if the  same data already exists
+      if (JSON.stringify(prevState) !== JSON.stringify(sortDataByName)) {
+        return [...prevState, ...sortDataByName];
+      } else {
+        return [...prevState];
+      }
+    });
   };
 
   useEffect(() => {
